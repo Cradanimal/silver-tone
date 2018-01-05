@@ -14,13 +14,20 @@ fun main(args: Array<String>) {
 }
 
 
-//for hackerRank
-//import java.io.*
-//import java.util.*
-//
-//fun main(args: Array<String>) {
-//    /* Enter your code here. Read input from STDIN. Print output to STDOUT. */
-//    var a = readLine()
-//    val b : String? = readLine()?.reversed()
-//    print(b)
-//}
+
+object Solution {
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val scan = Scanner(System.`in`)
+        val array = IntArray(scan.nextInt())
+        for (i in array.indices) {
+            array[i] = scan.nextInt()
+        }
+        scan.close()
+
+        for (i in array.size - 1 downTo -1 + 1) {
+            print(array[i].toString() + " ")
+        }
+    }
+}
